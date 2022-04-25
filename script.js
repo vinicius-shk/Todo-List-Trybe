@@ -10,5 +10,8 @@ function adicionaTarefa() {
     lista.appendChild(itemLista);
 }
 function alteraCor(evento) {
+    for (let index = 0; index < lista.children.length; index += 1) {
+        lista.children[index].classList.remove('selected');
+    }
     evento.target.className = 'selected';
 }
